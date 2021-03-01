@@ -13,13 +13,15 @@ class HttpAssetLoader extends AssetLoader {
   @override
   Future<Map<String, dynamic>> load(String path, Locale locale) async {
     log('easy localization loader: load http $path');
-    try {
-      return http
-          .get(path)
-          .then((response) => json.decode(response.body.toString()));
-    } catch (e) {
-      //Catch network exceptions
-      return Future.value();
-    }
+//     try {
+//       return http
+//           .get(path)
+//           .then((response) => json.decode(response.body.toString()));
+//     } catch (e) {
+// //      Catch network exceptions
+//       return Future.value();
+//     }
+    
+    Future.value();
   }
 }
